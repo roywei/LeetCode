@@ -10,7 +10,13 @@ Link: [28](https://leetcode.com/problems/implement-strstr/#/description)
 
 #### 子问题拆解
 
+1. 最简单直观的解决办法，暴力搜索，haystack每个位置开始，看是否存在needle，由此想到2 pointer解题
+2. 如有不一样，只能前进一位
+3. 考虑corner case，为空，长度变化
+
 #### 过程可视化
+
+画出两个str相对长度三种可能，检验主程序是否cover corner case，画图和代入法得到停止位置: \(haystack.length\(\) - needle.length\(\) + 1\)， 图略
 
 #### 打破假设
 
@@ -41,7 +47,7 @@ public class Solution {
 
 ## Analysis
 
-
+O\(m\*n\)
 
 ## Reference
 
