@@ -11,11 +11,17 @@
 3. 打破假设
 4. 类比
 
+电子书阅读地址: [gitbook](https://roywei.gitbooks.io/leetcode/content/two-pointers/strstr.html)
+
 ## Reference
 
 1. [硅谷程序员进阶之路](https://docs.google.com/document/d/1NPojCYmFOSg-GvYfOKKS6dkp6VBNbjVmYho5nl8YI3M/edit)
 2. [leetcode笔记](https://www.gitbook.com/book/yuanbin/algorithm/details)
 3. [System Design ](https://www.gitbook.com/book/soulmachine/system-design/details)
+
+## License
+
+本作品采用 **知识共享署名-相同方式共享 4.0 国际许可协议 **进行许可。**传播此文档时请注意遵循以上许可协议。**关于本许可证的更多详情可参考：[CC BY SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/)
 
 
 
