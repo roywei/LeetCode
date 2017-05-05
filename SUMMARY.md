@@ -8,4 +8,6 @@
   * [Subsets](backtracking/subsets.md)
 * [Knowledge Base](knowledge-base.md)
   * [Backtracking, Recursion, and Dynamic Programming](knowledge-base/backtracking-recursion-and-dynamic-programming.md)
+* Interview
+  * [Resources](resources.md)
 

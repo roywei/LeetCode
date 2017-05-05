@@ -44,8 +44,6 @@ Link:[ 78](https://leetcode.com/problems/subsets/#/description)
 
 ##### 解法二：Backtracking
 
-
-
 #### 过程可视化
 
 #### 打破假设
@@ -55,7 +53,7 @@ Link:[ 78](https://leetcode.com/problems/subsets/#/description)
 ## Code
 
 ```java
-//Java
+//Solution 1:
 public class Solution {
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> ret = new ArrayList<List<Integer>>();
@@ -79,9 +77,30 @@ public class Solution {
 }
 ```
 
+```java
+// Solution 2
+public List<List<Integer>> subsets(int[] nums) {
+    List<List<Integer>> list = new ArrayList<>();
+    Arrays.sort(nums);
+    backtrack(list, new ArrayList<>(), nums, 0);
+    return list;
+}
+
+private void backtrack(List<List<Integer>> list , List<Integer> tempList, int [] nums, int start){
+    list.add(new ArrayList<>(tempList));
+    for(int i = start; i < nums.length; i++){
+        tempList.add(nums[i]);
+        backtrack(list, tempList, nums, i + 1);
+        tempList.remove(tempList.size() - 1);
+    }
+}
+```
+
 ## Analysis
 
 ## Reference
+
+1. 模板： https://discuss.leetcode.com/topic/46159/a-general-approach-to-backtracking-questions-in-java-subsets-permutations-combination-sum-palindrome-partitioning
 
 
 
