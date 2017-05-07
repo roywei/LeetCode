@@ -44,6 +44,20 @@ Link:[ 78](https://leetcode.com/problems/subsets/#/description)
 
 ##### 解法二：Backtracking
 
+另一种直观的解题思路，直觉的解法是，先放入空集，然后放入所有1开头的集合，再放入2开头的集合，再放入3开头的集合。
+
+放入1开头的集合过程，nums = \[1,2,3\]：
+
+1. temp array = \[\]为起点, 可以放入result
+2. temp放入1: \[1\], 可以放入result
+3. temp放入2: \[1,2\] , 可以放入result
+4. temp放入3: \[1,2,3\], 可以放入result
+5. 没有可以放入的数字，backtrack 回\[1,2\], 依然没有可以放入的数字，再backtrack回\[1\], 再回\[\]
+6. temp放入\[2\], 可以放入result
+7. 以此类推放入\[2,3\], backtrack 2次，放入\[3\]
+
+
+
 #### 过程可视化
 
 #### 打破假设
@@ -100,7 +114,8 @@ private void backtrack(List<List<Integer>> list , List<Integer> tempList, int []
 
 ## Reference
 
-1. 模板： https://discuss.leetcode.com/topic/46159/a-general-approach-to-backtracking-questions-in-java-subsets-permutations-combination-sum-palindrome-partitioning
+1. 模板： [https://discuss.leetcode.com/topic/46159/a-general-approach-to-backtracking-questions-in-java-subsets-permutations-combination-sum-palindrome-partitioning](https://discuss.leetcode.com/topic/46159/a-general-approach-to-backtracking-questions-in-java-subsets-permutations-combination-sum-palindrome-partitioning)
+2. 其他解法：[https://soulmachine.gitbooks.io/algorithm-essentials/content/java/brute-force/subsets.html](https://soulmachine.gitbooks.io/algorithm-essentials/content/java/brute-force/subsets.html)
 
 
 

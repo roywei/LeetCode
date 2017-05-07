@@ -18,6 +18,7 @@
 1. [硅谷程序员进阶之路](https://docs.google.com/document/d/1NPojCYmFOSg-GvYfOKKS6dkp6VBNbjVmYho5nl8YI3M/edit) 和 [对应视频](https://zhuanlan.zhihu.com/p/26663354)
 2. [leetcode笔记](https://www.gitbook.com/book/yuanbin/algorithm/details)
 3. [System Design ](https://www.gitbook.com/book/soulmachine/system-design/details)
+4. [九章算法答案](http://www.jiuzhang.com/solutions/)
 
 ## License
 
