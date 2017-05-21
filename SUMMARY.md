@@ -6,6 +6,7 @@
   * [strStr](two-pointers/strstr.md)
 * [Backtracking](backtracking.md)
   * [Subsets](backtracking/subsets.md)
+  * [SubsetsII](backtracking/subsetsii.md)
 * [Knowledge Base](knowledge-base.md)
   * [Backtracking, Recursion, and Dynamic Programming](knowledge-base/backtracking-recursion-and-dynamic-programming.md)
 * [Interview](interview.md)
