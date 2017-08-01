@@ -1,16 +1,14 @@
-
-
-#  Binary Search
+# Binary Search
 
 ## 四点要素:
 
-1. start + 1 &lt; end
+1. start + 1 &lt; end，\(start和end中间至少有一个数\)
 
 2. start + \(end - start\) / 2 \(**不能写成 \(start+end\)/2, 因为start +end可能会超过int限制**\)
 
-3. A\[mid\] ==, &lt;, &gt;
+3. A\[mid\] ==, &lt;, &gt; （mid的三种情况）
 
-4. A\[start\] A\[end\] ? target
+4. A\[start\] A\[end\] ? target \(start和end的判断\)
 
 ## Example:
 
