@@ -4,11 +4,13 @@ Link: [278](https://leetcode.com/problems/first-bad-version/#/description)
 
 > Description:
 >
-> You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
+> Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
 >
-> Suppose you have`n`versions`[1, 2, ..., n]`and you want to find out the first bad one, which causes all the following ones to be bad.
+> \(i.e.,`0 1 2 4 5 6 7`might become`4 5 6 7 0 1 2`\).
 >
-> You are given an API`bool isBadVersion(version)`which will return whether`version`is bad. Implement a function to find the first bad version. You should minimize the number of calls to the API.
+> Find the minimum element.
+>
+> You may assume no duplicate exists in the array.
 
 ## Solution
 
@@ -24,9 +26,35 @@ Link: [278](https://leetcode.com/problems/first-bad-version/#/description)
 
 ```java
 //Java
+public class Solution {
+    public int findMin(int[] nums) {
+        if(nums.length == 0)
+            return -1;
+        
+        int start = 0;
+        int end = nums.length - 1;
+        while(start + 1 < end){
+            int mid = start + (end - start)/2;
+            if(nums[mid] > nums[mid+1])
+                return nums[mid+1];
+            else if(nums[mid] < nums[mid+1] && nums[mid] < nums[mid-1])
+                return nums[mid];
+            else if(nums[mid] < nums[mid+1] && nums[mid] > nums[start])
+                start = mid;
+            else if(nums[mid] < nums[mid+1] && nums[mid] < nums[start])
+                end = mid;
+        }
+        if(nums[start] > nums[end])
+            return nums[end];
+        //return nums[0] not nums[start], test case[1,2,3]
+        return nums[0];
+    }
+}
 ```
 
 ## Analysis
+
+注意最后可能有顺序，没rotate的情况，这时应该返回nums\[0\]最小
 
 ## Reference
 

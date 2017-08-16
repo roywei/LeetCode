@@ -12,5 +12,5 @@
 * [Interview](interview.md)
   * [Resources](resources.md)
 * [Binary Search](binary-search.md)
-  * [First Bad Version](first-bad-version.md)
+  * [Find Minimum in Rotated Sorted Array](first-bad-version.md)
 
