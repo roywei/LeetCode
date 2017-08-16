@@ -13,5 +13,5 @@
   * [Resources](resources.md)
 * [Binary Search](binary-search.md)
   * [Find Minimum in Rotated Sorted Array](first-bad-version.md)
-  * [testSearch in Rotated Sorted Array](test.md)
+  * [Search in Rotated Sorted Array](test.md)
 
