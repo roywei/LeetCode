@@ -14,4 +14,6 @@
 * [Binary Search](binary-search.md)
   * [Find Minimum in Rotated Sorted Array](first-bad-version.md)
   * [Search in Rotated Sorted Array](test.md)
+* [Binary Tree](binary-tree.md)
+  * [Binary Tree Inorder Traversal](binary-tree/binary-tree-inorder-traversal.md)
 
