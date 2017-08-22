@@ -16,4 +16,6 @@
   * [Search in Rotated Sorted Array](test.md)
 * [Binary Tree](binary-tree.md)
   * [Binary Tree Inorder Traversal](binary-tree/binary-tree-inorder-traversal.md)
+  * [Binary Tree Preorder Traversal](binary-tree/binary-tree-preorder-traversal.md)
+  * [Binary Tree Postorder Traversal](binary-tree/binary-tree-postorder-traversal.md)
 

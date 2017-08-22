@@ -19,79 +19,22 @@ There are three different types of depth-first traversals, :
 
 There is only one kind of breadth-first traversal--the level order traversal. This traversal visits nodes by levels **from top to bottom and from left to right.**
 
+| As an example consider the following tree and its four traversals:  PreOrder - 8, 5, 9, 7, 1, 12, 2, 4, 11, 3 InOrder - 9, 5, 1, 7, 2, 12, 8, 4, 3, 11 PostOrder - 9, 1, 2, 12, 7, 5, 3, 11, 4, 8 LevelOrder - 8, 5, 4, 9, 7, 11, 1, 12, 3, 2 |
+| :--- |
+
+
+![](https://www.cs.cmu.edu/~adamchik/15-121/lectures/Trees/pix/tree1.bmp)
+
+An **Euler tour** is a walk around the binary tree where each edge is treated as a wall, which you cannot cross. In this walk each node will be visited either on the left, or under the below, or on the right. The Euler tour in which we visit nodes on the left produces a preorder traversal. When we visit nodes from the below, we get an inorder traversal. And when we visit nodes on the right, we get a postorder traversal.\(顺着箭头走，从root开始，碰到该颜色的墙壁才记录，都从E开始走，preorder第一个是E，inorder和postorder都是H\)
+
+![](https://www.cs.cmu.edu/~adamchik/15-121/lectures/Trees/pix/traversalEuler.bmp)
+
+## 
+
 ## Example:
 
 ```java
-  * 本代码由九章算法编辑提供。版权所有，转发请注明出处。
-  * - 九章算法致力于帮助更多中国人找到好的工作，教师团队均来自硅谷和国内的一线大公司在职工程师。
-  * - 现有的面试培训课程包括：九章算法班，系统设计班，算法强化班，Java入门与基础算法班，Android 项目实战班，Big Data 项目实战班，
-  * - 更多详情请见官方网站：http://www.jiuzhang.com/?source=code
-  */ 
 
-// version 1: with jiuzhang template
-public class Solution {
-    /**
-     * @param A an integer array sorted in ascending order
-     * @param target an integer
-     * @return an integer
-     */
-    public int findPosition(int[] nums, int target) {
-        if (nums == null || nums.length == 0) {
-            return -1;
-        }
-
-        int start = 0, end = nums.length - 1;
-        while (start + 1 < end) {
-            int mid = start + (end - start) / 2;
-            if (nums[mid] == target) {
-                return mid;
-            } else if (nums[mid] < target) {
-                start = mid;
-            } else {
-                end = mid;
-            }
-        }
-
-        if (nums[start] == target) {
-            return start;
-        }
-        if (nums[end] == target) {
-            return end;
-        }
-        return -1;
-    }
-}
-
-// version 2: without jiuzhang template
-public class Solution {
-    /**
-     * @param A an integer array sorted in ascending order
-     * @param target an integer
-     * @return an integer
-     */
-    public int findPosition(int[] nums, int target) {
-        if (nums == null || nums.length == 0) {
-            return -1;
-        }
-
-        int start = 0, end = nums.length - 1;
-        while (start < end) {
-            int mid = start + (end - start) / 2;
-            if (nums[mid] == target) {
-                return mid;
-            } else if (nums[mid] < target) {
-                start = mid + 1;
-            } else {
-                end = mid - 1;
-            }
-        }
-
-        if (nums[start] == target) {
-            return start;
-        }
-        return -1;
-    }
-}
 ```
 
 
