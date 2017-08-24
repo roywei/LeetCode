@@ -1,6 +1,5 @@
 # 144. Binary Tree Preorder Traversal
 
-  
 Link: [144](https://leetcode.com/problems/binary-tree-preorder-traversal/description/)
 
 > Description
@@ -8,8 +7,7 @@ Link: [144](https://leetcode.com/problems/binary-tree-preorder-traversal/descrip
 > Given a binary tree, return thepreordertraversal of its nodes' values.
 >
 > For example:  
-> Given binary tree`{1,#,2,3}`,  
->
+> Given binary tree`{1,#,2,3}`,
 >
 > ```
 >    1
@@ -17,18 +15,22 @@ Link: [144](https://leetcode.com/problems/binary-tree-preorder-traversal/descrip
 >      2
 >     /
 >    3
->
 > ```
->
->
 >
 > return`[1,2,3]`.
 >
 > **Note:**Recursive solution is trivial, could you do it iteratively?
 
-## Solution
+## Solution 1\(非递归\)
 
 #### 子问题拆解
+
+visit root之后，如果有左孩子，先visit左孩子，直到为空，才去最近一层的右孩子，这种特性，联想到stack LIFO
+
+1. push root
+2. while stack is not empty, pop, add to result
+3. push right child\(**把优先访问的放在后面push近stack**\)
+4. push left child
 
 #### 过程可视化
 
@@ -61,11 +63,11 @@ public class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
         Stack<TreeNode> stack = new Stack<TreeNode>();
         List<Integer> preorder = new ArrayList<Integer>();
-        
+
         if (root == null) {
             return preorder;
         }
-        
+
         stack.push(root);
         while (!stack.empty()) {
             TreeNode node = stack.pop();
@@ -77,7 +79,7 @@ public class Solution {
                 stack.push(node.left);
             }
         }
-        
+
         return preorder;
     }
 }
@@ -125,9 +127,9 @@ public class Solution {
 
 ## Analysis
 
+O\(n\)
+
 ## Reference
-
-
 
 
 
