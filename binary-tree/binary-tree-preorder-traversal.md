@@ -32,11 +32,21 @@ visit root之后，如果有左孩子，先visit左孩子，直到为空，才�
 3. push right child\(**把优先访问的放在后面push近stack**\)
 4. push left child
 
-#### 过程可视化
+## Solution 2\(递归\)
 
-#### 打破假设
+#### 子问题拆解
 
-#### 类比
+每一次traverse都是按照同样的思路，先往左走，左边走到头再往又走，联想到递归
+
+1. add root to result
+2. traverse left
+3. traverse right
+
+## Solution 3\(分治\)
+
+#### 子问题拆解
+
+拆分成小问题，在每一层的输出都是，先输出root，然后输出所有左边的结果，最后输出所有右边的结果
 
 ## Code
 
