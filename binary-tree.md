@@ -4,6 +4,8 @@
 
 [Binary Tree](https://www.cs.cmu.edu/~adamchik/15-121/lectures/Trees/trees.html)
 
+[二叉树遍历](http://www.jianshu.com/p/456af5480cee)
+
 ## Traversals
 
 A traversal is a process that visits all the nodes in the tree. Since a tree is a nonlinear data structure, there is no unique traversal. We will consider several traversal algorithms with we group in the following two kinds
@@ -16,6 +18,16 @@ There are three different types of depth-first traversals, :
 * **PreOrder** traversal - visit the parent first and then left and right children;
 * **InOrder** traversal - visit the left child, then the parent and the right child;
 * **PostOrder** traversal - visit left child, then the right child and then the parent;
+
+
+
+**三种遍历方法的考查顺序一致，得到的结果却不一样，原因在于：**
+
+**先序：**考察到一个节点后，即刻输出该节点的值，并继续遍历其左右子树。\(根左右\)
+
+**中序：**考察到一个节点后，将其暂存，遍历完左子树后，再输出该节点的值，然后遍历右子树。\(左根右\)
+
+**后序：**考察到一个节点后，将其暂存，遍历完左右子树后，再输出该节点的值。\(左右根\)
 
 There is only one kind of breadth-first traversal--the level order traversal. This traversal visits nodes by levels **from top to bottom and from left to right.**
 
