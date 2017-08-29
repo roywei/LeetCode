@@ -7,8 +7,7 @@ Link: [94](https://leetcode.com/problems/binary-tree-inorder-traversal/descripti
 > Given a binary tree, return theinordertraversal of its nodes' values.
 >
 > For example:  
-> Given binary tree`[1,null,2,3]`,  
->
+> Given binary tree`[1,null,2,3]`,
 >
 > ```
 >    1
@@ -16,10 +15,7 @@ Link: [94](https://leetcode.com/problems/binary-tree-inorder-traversal/descripti
 >      2
 >     /
 >    3
->
 > ```
->
->
 >
 > return`[1,3,2]`.
 >
@@ -28,6 +24,8 @@ Link: [94](https://leetcode.com/problems/binary-tree-inorder-traversal/descripti
 ## Solution
 
 #### 子问题拆解
+
+三种方法同理preorder，只是先输出左子树，然后根，最后右子树
 
 #### 过程可视化
 
@@ -78,6 +76,39 @@ public class Solution {
         return result;
     }
 }
+
+
+ /** Solution 2: recursive
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> inorder = new ArrayList<>();
+        traverse(root, inorder);
+        return inorder;
+    }
+    
+    public void traverse(TreeNode node, List<Integer> inorder){
+        if(node == null)
+            return;
+        traverse(node.left, inorder);
+        inorder.add(node.val);
+        traverse(node.right, inorder);
+    }
+*/
+
+/** Solution 3: Divide and Conquer
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> inorder = new ArrayList<>();
+        if(root == null)
+            return inorder;
+        List<Integer> left = inorderTraversal(root.left);
+        List<Integer> right = inorderTraversal(root.right);
+        
+        inorder.addAll(left);
+        inorder.add(root.val);
+        inorder.addAll(right);
+        return inorder;
+    
+    }
+    **/
 ```
 
 ## Analysis
