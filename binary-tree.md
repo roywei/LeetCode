@@ -4,9 +4,9 @@
 
 [Binary Tree](https://www.cs.cmu.edu/~adamchik/15-121/lectures/Trees/trees.html)
 
-[二叉树遍历](http://www.jianshu.com/p/456af5480cee)
-
 ## Traversals
+
+[Reference](http://www.jianshu.com/p/456af5480cee)
 
 A traversal is a process that visits all the nodes in the tree. Since a tree is a nonlinear data structure, there is no unique traversal. We will consider several traversal algorithms with we group in the following two kinds
 
