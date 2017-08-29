@@ -25,7 +25,11 @@ Link: [94](https://leetcode.com/problems/binary-tree-inorder-traversal/descripti
 
 #### 子问题拆解
 
-三种方法同理preorder，只是先输出左子树，然后根，最后右子树
+**三种方法同理preorder，只是先输出左子树，然后根，最后右子树**
+
+**和非递归先序遍历类似，唯一区别是考查到当前节点时，并不直接输出该节点。**
+
+**而是当考查节点为空时，从栈中弹出的时候再进行输出\(永远先考虑左子树，直到左子树为空才访问根节点\)。**
 
 #### 过程可视化
 
@@ -84,7 +88,7 @@ public class Solution {
         traverse(root, inorder);
         return inorder;
     }
-    
+
     public void traverse(TreeNode node, List<Integer> inorder){
         if(node == null)
             return;
@@ -101,12 +105,12 @@ public class Solution {
             return inorder;
         List<Integer> left = inorderTraversal(root.left);
         List<Integer> right = inorderTraversal(root.right);
-        
+
         inorder.addAll(left);
         inorder.add(root.val);
         inorder.addAll(right);
         return inorder;
-    
+
     }
     **/
 ```

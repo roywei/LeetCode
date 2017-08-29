@@ -71,25 +71,23 @@ Version 0: Non-Recursion (Recommend)
  */
 public class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
-        Stack<TreeNode> stack = new Stack<TreeNode>();
-        List<Integer> preorder = new ArrayList<Integer>();
-
-        if (root == null) {
+        List<Integer> preorder = new ArrayList<>();
+        if(root == null)
             return preorder;
-        }
-
-        stack.push(root);
-        while (!stack.empty()) {
-            TreeNode node = stack.pop();
-            preorder.add(node.val);
-            if (node.right != null) {
-                stack.push(node.right);
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode node = root;
+        while(node != null || !stack.empty()){
+            while(node != null){
+                stack.push(node);
+                preorder.add(node.val);
+                node = node.left;
             }
-            if (node.left != null) {
-                stack.push(node.left);
+            if(!stack.empty()){
+                //这是node为空， 左边走不下去了，回到上一次的根，即stack最上面的
+                node = stack.pop();
+                node = node.right;
             }
         }
-
         return preorder;
     }
 }

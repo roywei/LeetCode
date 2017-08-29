@@ -1,6 +1,5 @@
 # 145. Binary Tree Postorder Traversal
 
-  
 Link:[145](https://leetcode.com/problems/binary-tree-postorder-traversal/description/)
 
 > Description
@@ -8,8 +7,7 @@ Link:[145](https://leetcode.com/problems/binary-tree-postorder-traversal/descrip
 > Given a binary tree, return thepostordertraversal of its nodes' values.
 >
 > For example:  
-> Given binary tree`{1,#,2,3}`,  
->
+> Given binary tree`{1,#,2,3}`,
 >
 > ```
 >    1
@@ -17,10 +15,7 @@ Link:[145](https://leetcode.com/problems/binary-tree-postorder-traversal/descrip
 >      2
 >     /
 >    3
->
 > ```
->
->
 >
 > return`[3,2,1]`.
 >
@@ -39,61 +34,138 @@ Link:[145](https://leetcode.com/problems/binary-tree-postorder-traversal/descrip
 ## Code
 
 ```java
-//Java
 /**
-  * 本代码由九章算法编辑提供。版权所有，转发请注明出处。
-  * - 九章算法致力于帮助更多中国人找到好的工作，教师团队均来自硅谷和国内的一线大公司在职工程师。
-  * - 现有的面试培训课程包括：九章算法班，系统设计班，算法强化班，Java入门与基础算法班，Android 项目实战班，Big Data 项目实战班，
-  * - 更多详情请见官方网站：http://www.jiuzhang.com/?source=code
-  */ 
-
-//Recursive
-public ArrayList<Integer> postorderTraversal(TreeNode root) {
-    ArrayList<Integer> result = new ArrayList<Integer>();
-
-    if (root == null) {
-        return result;
-    }
-
-    result.addAll(postorderTraversal(root.left));
-    result.addAll(postorderTraversal(root.right));
-    result.add(root.val);
-
-    return result;   
-}
-
-//Iterative
-public ArrayList<Integer> postorderTraversal(TreeNode root) {
-    ArrayList<Integer> result = new ArrayList<Integer>();
-    Stack<TreeNode> stack = new Stack<TreeNode>();
-    TreeNode prev = null; // previously traversed node
-    TreeNode curr = root;
-
-    if (root == null) {
-        return result;
-    }
-
-    stack.push(root);
-    while (!stack.empty()) {
-        curr = stack.peek();
-        if (prev == null || prev.left == curr || prev.right == curr) { // traverse down the tree
-            if (curr.left != null) {
-                stack.push(curr.left);
-            } else if (curr.right != null) {
-                stack.push(curr.right);
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    // Solution: Non Recursive
+    public List<Integer> postorderTraversal(TreeNode root) {
+        
+        List<Integer> postorder = new ArrayList<>();
+        if(root == null)
+            return postorder;
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode node = root;
+        TreeNode lastVisit = root;
+        while(node != null || !stack.empty()){
+            while(node != null){
+                stack.push(node);
+                node = node.left;
             }
-        } else if (curr.left == prev) { // traverse up the tree from the left
-            if (curr.right != null) {
-                stack.push(curr.right);
+            node = stack.peek();
+            if(node.right == null || node.right == lastVisit){
+                postorder.add(node.val);
+                node = stack.pop();
+                lastVisit = node;
+                node = null;
+            }else{
+                node = node.right;
             }
-        } else { // traverse up the tree from the right
-            result.add(curr.val);
-            stack.pop();
         }
-        prev = curr;
+        return postorder;
     }
+    /** Soulution 2 recursion
+    public List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> postorder = new ArrayList<>();
+        traverse(root, postorder);
+        return postorder;
 
-    return result;
+    }
+    
+    public void traverse(TreeNode node, List<Integer> postorder){
+        if(node == null)
+            return;
+        traverse(node.left, postorder);
+        traverse(node.right, postorder);
+        postorder.add(node.val);
+    }
+    */ 
+    /** Solution 1 Divide and Conquer
+    public List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> postorder = new ArrayList<>();
+        if(root == null)
+            return postorder;
+        List<Integer> left = postorderTraversal(root.left);
+        List<Integer> right = postorderTraversal(root.right);
+        postorder.addAll(left);
+        postorder.addAll(right);
+        postorder.add(root.val);
+        return postorder;
+
+    }
+    */
+}/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    // Solution: Non Recursive
+    public List<Integer> postorderTraversal(TreeNode root) {
+        
+        List<Integer> postorder = new ArrayList<>();
+        if(root == null)
+            return postorder;
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode node = root;
+        TreeNode lastVisit = root;
+        while(node != null || !stack.empty()){
+            while(node != null){
+                stack.push(node);
+                node = node.left;
+            }
+            node = stack.peek();
+            if(node.right == null || node.right == lastVisit){
+                postorder.add(node.val);
+                node = stack.pop();
+                lastVisit = node;
+                node = null;
+            }else{
+                node = node.right;
+            }
+        }
+        return postorder;
+    }
+    /** Soulution 2 recursion
+    public List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> postorder = new ArrayList<>();
+        traverse(root, postorder);
+        return postorder;
+
+    }
+    
+    public void traverse(TreeNode node, List<Integer> postorder){
+        if(node == null)
+            return;
+        traverse(node.left, postorder);
+        traverse(node.right, postorder);
+        postorder.add(node.val);
+    }
+    */ 
+    /** Solution 1 Divide and Conquer
+    public List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> postorder = new ArrayList<>();
+        if(root == null)
+            return postorder;
+        List<Integer> left = postorderTraversal(root.left);
+        List<Integer> right = postorderTraversal(root.right);
+        postorder.addAll(left);
+        postorder.addAll(right);
+        postorder.add(root.val);
+        return postorder;
+
+    }
+    */
 }
 ```
 
