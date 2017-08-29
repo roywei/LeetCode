@@ -19,8 +19,6 @@ There are three different types of depth-first traversals, :
 * **InOrder** traversal - visit the left child, then the parent and the right child;
 * **PostOrder** traversal - visit left child, then the right child and then the parent;
 
-
-
 **三种遍历方法的考查顺序一致，得到的结果却不一样，原因在于：**
 
 **先序：**考察到一个节点后，即刻输出该节点的值，并继续遍历其左右子树。\(根左右\)
