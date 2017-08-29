@@ -18,4 +18,6 @@
   * [Binary Tree Inorder Traversal](binary-tree/binary-tree-inorder-traversal.md)
   * [Binary Tree Preorder Traversal](binary-tree/binary-tree-preorder-traversal.md)
   * [Binary Tree Postorder Traversal](binary-tree/binary-tree-postorder-traversal.md)
+* [Sorting](sorting.md)
+  * Merge Sort
 

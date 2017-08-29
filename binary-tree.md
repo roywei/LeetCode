@@ -39,13 +39,7 @@ An **Euler tour** is a walk around the binary tree where each edge is treated as
 
 ![](https://www.cs.cmu.edu/~adamchik/15-121/lectures/Trees/pix/traversalEuler.bmp)
 
-## 
 
-## Example:
-
-```java
-
-```
 
 
 
