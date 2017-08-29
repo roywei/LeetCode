@@ -25,6 +25,9 @@ Link:[145](https://leetcode.com/problems/binary-tree-postorder-traversal/descrip
 
 #### 子问题拆解
 
+1. 需要标记右子树已经visit：lastVisit = node;
+2. 不要再traverse左子树，node = null;
+
 #### 过程可视化
 
 #### 打破假设
@@ -46,7 +49,7 @@ Link:[145](https://leetcode.com/problems/binary-tree-postorder-traversal/descrip
 class Solution {
     // Solution: Non Recursive
     public List<Integer> postorderTraversal(TreeNode root) {
-        
+
         List<Integer> postorder = new ArrayList<>();
         if(root == null)
             return postorder;
@@ -77,7 +80,7 @@ class Solution {
         return postorder;
 
     }
-    
+
     public void traverse(TreeNode node, List<Integer> postorder){
         if(node == null)
             return;
@@ -112,7 +115,7 @@ class Solution {
 class Solution {
     // Solution: Non Recursive
     public List<Integer> postorderTraversal(TreeNode root) {
-        
+
         List<Integer> postorder = new ArrayList<>();
         if(root == null)
             return postorder;
@@ -143,7 +146,7 @@ class Solution {
         return postorder;
 
     }
-    
+
     public void traverse(TreeNode node, List<Integer> postorder){
         if(node == null)
             return;
