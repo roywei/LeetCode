@@ -13,6 +13,7 @@
   * [Resources](resources.md)
   * [DIDI](didi-onsite.md)
   * Percept.ai
+  * [Blend](blend.md)
 * [Binary Search](binary-search.md)
   * [Find Minimum in Rotated Sorted Array](first-bad-version.md)
   * [Search in Rotated Sorted Array](test.md)
