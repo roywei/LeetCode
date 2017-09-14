@@ -9,10 +9,11 @@
   * [SubsetsII](backtracking/subsetsii.md)
 * [Knowledge Base](knowledge-base.md)
   * [Backtracking, Recursion, and Dynamic Programming](knowledge-base/backtracking-recursion-and-dynamic-programming.md)
+  * [Java](knowledge-base/java.md)
 * [Interview](interview.md)
   * [Resources](resources.md)
   * [DIDI](didi-onsite.md)
-  * Percept.ai
+  * [Percept.ai](perceptai.md)
   * [Blend](blend.md)
 * [Binary Search](binary-search.md)
   * [Find Minimum in Rotated Sorted Array](first-bad-version.md)
