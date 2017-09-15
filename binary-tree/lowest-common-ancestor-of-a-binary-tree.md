@@ -75,8 +75,6 @@ class Solution {
 
 ## Reference
 
-
-
 ## Solution2
 
 #### 子问题拆解
@@ -97,6 +95,37 @@ class Solution {
 
 ```java
 //Java
+class Solution {
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        Stack<TreeNode> stack = new Stack<>();
+        HashMap<TreeNode, TreeNode> parent = new HashMap<>();
+        stack.push(root);
+        parent.put(root, null);
+        while(!stack.empty() || !parent.containsKey(p) || !parent.containsKey(q)){
+            TreeNode node = stack.pop();
+            if(node.left != null){
+                stack.push(node.left);
+                parent.put(node.left, node);
+            }
+            if(node.right != null){
+                stack.push(node.right);
+                parent.put(node.right, node);
+            }
+        }
+        HashSet<TreeNode> path = new HashSet<>();
+        while(p != null){
+            path.add(p);
+            p = parent.get(p);
+        }
+        while(q != null){
+            if(path.contains(q))
+                return q;
+            else
+                q = parent.get(q);
+        }
+        return null;
+    }
+}
 ```
 
 ## Analysis
