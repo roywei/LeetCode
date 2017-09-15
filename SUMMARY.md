@@ -22,7 +22,7 @@
   * [Binary Tree Inorder Traversal](binary-tree/binary-tree-inorder-traversal.md)
   * [Binary Tree Preorder Traversal](binary-tree/binary-tree-preorder-traversal.md)
   * [Binary Tree Postorder Traversal](binary-tree/binary-tree-postorder-traversal.md)
-  * 110. Balanced Binary Tree
+  * [Balanced Binary Tree](binary-tree/balanced-binary-tree.md)
 * [Sorting](sorting.md)
   * Merge Sort
 
