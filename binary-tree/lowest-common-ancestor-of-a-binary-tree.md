@@ -20,11 +20,11 @@
 >
 > For example, the lowest common ancestor \(LCA\) of nodes`5`and`1`is`3`. Another example is LCA of nodes`5`and`4`is`5`, since a node can be a descendant of itself according to the LCA definition.
 
-## Solution
+## Solution 1
 
 #### 子问题拆解
 
-Bottom Up Divide and Conquer:
+**Bottom Up Divide and Conquer:**
 
 **思考3个问题，分别在什么情况重新apply原function（这里是针对左右子树分别寻找LCA），base case是什么，要返回什么**
 
@@ -37,7 +37,7 @@ Bottom Up Divide and Conquer:
    输入root是leaf node时
    1. 如果root不为pq，root左右子树都为null, left = right = null, 这时根据1.iv，应该返回null
    2. 但是root = p/q时，left=right=null, 返回值为null就有问题了，尝试返回p/q,那么到上一层调用里如何处理？
-3. 1.iii 和 2.ii 综合考虑，得到思路，见图1，当只能找到p/q的时候，把p/q返回，直到某一层，p/q分别在left/right里面，返回root
+3. 1.iii 和 2.ii 综合考虑，得到思路，见图1，当只能找到p/q的时候，把p/q往上返回，直到某一层，p/q分别在left/right里面，返回root，或者root位p/q, left和right一个为null另一个为q/p, 还是返回root满足1.iii和2.ii的要求
 4. root = null/p/q是返回root， left，right都不为null时返回root, 都为null返回null，只有一边为null返回另一边\(LCA\)
 
 #### 过程可视化
@@ -69,6 +69,34 @@ class Solution {
         return null;     
     }
 }
+```
+
+## Analysis
+
+## Reference
+
+
+
+## Solution2
+
+#### 子问题拆解
+
+1. 暴力直觉:找到root到p和q的路径，然后从路径中找LCA
+2. 考虑用map记录每个node的parent
+3. 从p开始，顺着parent走到root，并记录路径
+4. 从q考试顺着parent往上走，看哪个parent在3的路径里，走到root就返回root
+5. 完成，优化第三部可以用set, 优化2可以traverse到pq都找到就停止
+
+#### 过程可视化
+
+#### 打破假设
+
+#### 类比
+
+## Code
+
+```java
+//Java
 ```
 
 ## Analysis
