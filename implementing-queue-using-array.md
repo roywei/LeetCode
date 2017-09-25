@@ -1,5 +1,4 @@
 ```java
-
 import java.io.*;
 import java.util.*;
 
@@ -18,13 +17,13 @@ class Queue {
     front = -1;
     end = -1;
     queue = new Object[size];
-    
+
   }
-  
+
   public boolean isempty(){
     return front == end;
   }
-  
+
   public int increment(int index){
     return (index + 1)%size;
   }
@@ -39,7 +38,7 @@ class Queue {
       queue[end] = value;
     } 
   }
-  
+
   public T deQueue(){
     T value = null;
     if(isempty())
@@ -49,9 +48,9 @@ class Queue {
       increment(front);
     }
     return value;
-      
+
   }
-  
+
   public static void main(String[] args) {
     ArrayList<String> strings = new ArrayList<String>();
     strings.add("Hello, World!");
@@ -63,8 +62,6 @@ class Queue {
     }
   }
 }
-
-
 ```
 
 
