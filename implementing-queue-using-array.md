@@ -1,11 +1,10 @@
-
-
 ## Implementing Queue Using Array
+
+From Ayasdi
 
 Reference: [http://www.geeksforgeeks.org/queue-set-1introduction-and-array-implementation/](http://www.geeksforgeeks.org/queue-set-1introduction-and-array-implementation/)
 
 ```java
-
 /*
  * [,0,]
     | 
