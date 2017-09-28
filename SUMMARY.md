@@ -15,7 +15,7 @@
   * [Resources](resources.md)
   * [DIDI](didi-onsite.md)
   * [Phone Interviews](perceptai.md)
-  * [Blend](blend.md)
+  * [LRU Cache](blend.md)
   * [Implementing Queue using Array](implementing-queue-using-array.md)
   * [AQR OA](aqr-oa.md)
   * [Restore IP Address](restore-ip-address.md)
