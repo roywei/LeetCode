@@ -1,5 +1,3 @@
-Indeed: merge two sorted list, array
-
 Percept.ai
 
 The Maze
