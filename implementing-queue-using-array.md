@@ -1,6 +1,10 @@
-```java
 
-import java.util.*;
+
+## Implementing Queue Using Array
+
+Reference: [http://www.geeksforgeeks.org/queue-set-1introduction-and-array-implementation/](http://www.geeksforgeeks.org/queue-set-1introduction-and-array-implementation/)
+
+```java
 
 /*
  * [,0,]
