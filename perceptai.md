@@ -1,8 +1,4 @@
-Percept.ai
-
-The Maze
-
-The Maze II
+Percept.ai: The Maze The Maze II
 
 C3IOT
 
