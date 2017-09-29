@@ -28,6 +28,7 @@
   * [Binary Tree Postorder Traversal](binary-tree/binary-tree-postorder-traversal.md)
   * [Balanced Binary Tree](binary-tree/balanced-binary-tree.md)
   * [Lowest Common Ancestor of a Binary Tree](binary-tree/lowest-common-ancestor-of-a-binary-tree.md)
+  * [Inorder Successor in BST](binary-tree/inorder-successor-in-bst.md)
 * [Sorting](sorting.md)
   * Merge Sort
 
