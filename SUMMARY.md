@@ -19,6 +19,8 @@
   * [Implementing Queue using Array](implementing-queue-using-array.md)
   * [AQR OA](aqr-oa.md)
   * [Restore IP Address](restore-ip-address.md)
+  * Google
+  * [OfferUp](offerup.md)
 * [Binary Search](binary-search.md)
   * [Find Minimum in Rotated Sorted Array](first-bad-version.md)
   * [Search in Rotated Sorted Array](test.md)
