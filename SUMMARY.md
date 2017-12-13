@@ -35,5 +35,7 @@
   * [Inorder Successor in BST](binary-tree/inorder-successor-in-bst.md)
 * [Sorting](sorting.md)
   * [Merge Sort](sorting/merge-sort.md)
+* Array
+  * [Third Maximum Number](third-maximum-number.md)
   * [Second Uniquely Larges Number](sorting/second-uniquely-larges-number.md)
 

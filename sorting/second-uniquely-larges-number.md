@@ -20,5 +20,7 @@ public int secondLargest(int[] nums){
 }
 ```
 
+注意上面的解法当nums里有Integer.MIN\_VALUE时有bug，正确解法参考 leetcode 414 Third Max Number
+
 
 

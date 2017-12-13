@@ -14,8 +14,6 @@
 
 被烙印群殴了，店面
 
-
-
 1
 
 有一长串的矩阵相乘，找出time complexity最优的乘法。最先乘的用括号括起来。
@@ -30,15 +28,15 @@ Onsite
 
 下面是题。
 
-1.     给一堆商品以及每个商品的库存数，买家可以用一个价格bid 一个商品，在任意时间点卖家可以查询赢得某个商品的所有买家。Designclass 并实现这两个功能:Bid\(product, price\) 和 getListofWinners\(product\)。后来又问如果有很多商品，并且有很多买家。怎么处理并发以及平衡consistency和highavailability
+1. 给一堆商品以及每个商品的库存数，买家可以用一个价格bid 一个商品，在任意时间点卖家可以查询赢得某个商品的所有买家。Designclass 并实现这两个功能:Bid\(product, price\) 和 getListofWinners\(product\)。后来又问如果有很多商品，并且有很多买家。怎么处理并发以及平衡consistency和highavailability
 
-2.     Hiring manager。BQ比其他人多一些。给一个整数数组，找出uniquely第二大的数。如果是找第K个呢。
+2. Hiring manager。BQ比其他人多一些。给一个整数数组，找出uniquely第二大的数。如果是找第K个呢。
 
-3.     视频远程面。全是BQ。
+3. 视频远程面。全是BQ。
 
-4.     LC173 BST iterator + LC76 minimum windowsubstring
+4. LC173 BST iterator + LC76 minimum windowsubstring
 
-5.     上来就问：前面面的怎么样？
+5. 上来就问：前面面的怎么样？
 
 我说：挺好的。（其实真的觉得面的还不错，写完code面试官都说 looks good to me。）
 
@@ -55,6 +53,8 @@ Onsite
 # 
 
 # BQ:
+
+https://www.linkedin.com/pulse/how-interview-amazon-leadership-david-anderson/
 
 
 
