@@ -11,6 +11,7 @@
   * [Backtracking, Recursion, and Dynamic Programming](knowledge-base/backtracking-recursion-and-dynamic-programming.md)
   * [Java](knowledge-base/java.md)
   * [Spark](knowledge-base/spark.md)
+  * [Java 8](knowledge-base/java-8.md)
 * [Interview](interview.md)
   * [Resources](resources.md)
   * [DIDI](didi-onsite.md)
