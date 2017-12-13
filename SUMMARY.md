@@ -22,6 +22,7 @@
   * Google
   * [OfferUp](offerup.md)
   * [GoldmanSachs](goldmansachs.md)
+  * [Amazon](amazon.md)
 * [Binary Search](binary-search.md)
   * [Find Minimum in Rotated Sorted Array](first-bad-version.md)
   * [Search in Rotated Sorted Array](test.md)
@@ -33,5 +34,6 @@
   * [Lowest Common Ancestor of a Binary Tree](binary-tree/lowest-common-ancestor-of-a-binary-tree.md)
   * [Inorder Successor in BST](binary-tree/inorder-successor-in-bst.md)
 * [Sorting](sorting.md)
-  * Merge Sort
+  * [Merge Sort](sorting/merge-sort.md)
+  * [Second Uniquely Larges Number](sorting/second-uniquely-larges-number.md)
 
