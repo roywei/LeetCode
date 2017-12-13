@@ -39,4 +39,5 @@
 * Array
   * [Third Maximum Number](third-maximum-number.md)
   * [Second Uniquely Larges Number](sorting/second-uniquely-larges-number.md)
+* [Heap](heap.md)
 
